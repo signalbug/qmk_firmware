@@ -1,3 +1,14 @@
+# Bug's Notes for NixOS!
+
+To be able to access the qmk firmware from non-root, add:
+
+`hardware.keyboard.qmk.enable = true;`
+
+To the NixOS configuration.
+
+The `qmk` package is all that's needed to run qmk.
+
+
 # Quantum Mechanical Keyboard Firmware
 
 [![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
