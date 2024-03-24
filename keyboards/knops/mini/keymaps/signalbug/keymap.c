@@ -26,10 +26,8 @@ void keyboard_pre_init_user(void) {
     setPinOutput(B2);
     setPinOutput(B1);
 	  //
-    // setPinOutput(D0);
-    // setPinOutput(D2);
-	  setPinOutput(B0);
-	  setPinOutput(B4);
+    setPinOutput(0);
+    setPinOutput(1);
 }
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -346,8 +344,8 @@ bool process_record_user (uint16_t keycode, keyrecord_t *record) {
     // SEND_STRING("SCK_B1");
     return false;
 	case PIN_SDA:
-		togglePin(B0);
-		togglePin(B4);
+		togglePin(0);
+		togglePin(1);
 		return false;
   }
   return true;
